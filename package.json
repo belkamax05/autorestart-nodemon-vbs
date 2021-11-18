@@ -1,0 +1,24 @@
+{
+  "name": "autorestart-nodemon-vbs",
+  "version": "1.0.0",
+  "description": "Application automatically restarts vbs script with a delay",
+  "repository": "https://github.com/belkamax05/autorestart-nodemon-vbs.git",
+  "author": "Maksym Bondarchuk <belkamax05@gmail.com>",
+  "license": "MIT",
+  "main": "start.vbs",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "nodemonConfig": {
+    "ext": "vbs",
+    "watch": [
+      "start.vbs",
+      "package.json"
+    ],
+    "verbose": true,
+    "delay": 5000,
+    "execMap": {
+      "vbs": "WScript"
+    }
+  }
+}
